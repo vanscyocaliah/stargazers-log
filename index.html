@@ -2,10 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stargazers log</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Stargazers log</h1>
-    <p>A log of the repositories I've starred.</p>
+    <main class="page-shell">
+      <header class="page-header">
+        <p class="eyebrow">GitHub activity</p>
+        <h1>Stargazers log</h1>
+        <p class="intro">A small record of the repositories that have earned a place in my toolkit.</p>
+      </header>
+
+      <section class="repository-section" aria-labelledby="repository-heading">
+        <div class="section-heading">
+          <h2 id="repository-heading">Starred repositories</h2>
+          <span id="repository-count" class="count" aria-live="polite">Loading...</span>
+        </div>
+        <ul id="repository-list" class="repository-list" aria-live="polite">
+          <li class="status-message">Loading repositories...</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
+Create a starred repositories page for my software project. Add:
+- events.json with sample data for a few starred repositories
+- style.css to style a simple list
+- script.js to fetch events.json and render the list
+- an update to index.html that links style.css and script.js
+
+Use the code written in https://docs.github.com/get-started/start-your-journey/creating-and-changing-your-code.
